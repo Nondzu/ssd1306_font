@@ -1,3 +1,7 @@
+// Package ssd1306_font implements a fonts library for the SSD1306 driver tinygo.org/x/drivers/ssd1306
+//
+//
+
 package ssd1306_font
 
 import (
