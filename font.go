@@ -2,7 +2,7 @@
 //
 //
 
-package ssd1306_font
+package ssd1306font
 
 import (
 	"image/color"
