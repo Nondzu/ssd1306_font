@@ -61,12 +61,12 @@ func (d *Display) Configure(cfg Config) {
 }
 
 func (d *Display) PrintText(str string) {
-	tmp := d.xPos
+	tmp := d.XPos
 	for _, char := range str {
 		d.PrintChar(byte(char))
-		d.xPos += int16(d.fontWidth)
+		d.XPos += int16(d.fontWidth)
 	}
-	d.xPos = tmp
+	d.XPos = tmp
 	d.device.Display()
 }
 
@@ -92,9 +92,9 @@ func (d *Display) PrintChar(char byte) {
 
 			pixel = pixel & (0x8000 >> j)
 			if pixel != 0 {
-				d.device.SetPixel(int16(j+d.xPos), int16(i+d.yPos), color.RGBA{R: 1})
+				d.device.SetPixel(int16(j+d.XPos), int16(i+d.YPos), color.RGBA{R: 1})
 			} else {
-				d.device.SetPixel(int16(j+d.xPos), int16(i+d.yPos), color.RGBA{R: 0})
+				d.device.SetPixel(int16(j+d.XPos), int16(i+d.YPos), color.RGBA{R: 0})
 			}
 		}
 	}
